@@ -21,7 +21,6 @@ struct ListingItemView: View {
                 }
             }
             .frame(height: 320)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
             .tabViewStyle(.page)
             
             // Lisitng info
@@ -30,6 +29,7 @@ struct ListingItemView: View {
                 VStack(alignment: .leading) {
                     Text("Miami, Florida")
                         .fontWeight(.semibold)
+                        .foregroundStyle(.black)
                     Text("12 mi away")
                         .foregroundStyle(.gray)
                     Text("Novem 12 - 15")
@@ -37,12 +37,15 @@ struct ListingItemView: View {
                     HStack(spacing: 4) {
                         Text("$567")
                             .fontWeight(.semibold)
+                            .foregroundStyle(.black)
                         Text("night")
+                            .foregroundStyle(.black)
                     }
                 }
                 Spacer()
                 // Rating
                 Label("4.86", systemImage: "star.fill")
+                    .foregroundStyle(.black)
             
             }
             .font(.footnote)
