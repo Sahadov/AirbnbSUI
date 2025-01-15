@@ -17,14 +17,15 @@ struct ExploreView: View {
                         NavigationLink(value: listing) {
                             ListingItemView()
                                 .frame(height: 400)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                
+                            
                         }
                     }
                 }
             }
             .navigationDestination(for: Int.self) {listing in
-                Text("Listing detail")
+                ListingDetailView()
+                    .navigationBarBackButtonHidden()
+                    .navigationBarHidden(true)
             }
         }
     }

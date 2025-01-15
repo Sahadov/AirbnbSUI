@@ -8,20 +8,12 @@
 import SwiftUI
 
 struct ListingItemView: View {
-    var images = ["apartment_1","apartment_2","apartment_3","apartment_4"]
-    
     var body: some View {
         VStack(spacing: 8) {
             // Image carousel
-            TabView(){
-                ForEach(images, id: \.self){image in
-                    Image(image)
-                        .resizable()
-                        .scaledToFill()
-                }
-            }
-            .frame(height: 320)
-            .tabViewStyle(.page)
+            ListingImageCarouselView()
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .frame(height: 320)
             
             // Lisitng info
             HStack(alignment: .top) {
