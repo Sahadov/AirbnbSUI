@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExploreView: View {
     @State var showDestinationSearchView = false
+    @StateObject var viewModel = ExploreViewModel(service: ExploreService())
     
     var body: some View {
         NavigationStack {
